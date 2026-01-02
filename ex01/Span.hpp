@@ -1,4 +1,8 @@
-#pragma once
+# ifndef SPAN_HPP
+# define SPAN_HPP
+
+
+
 #include <vector>
 #include <exception>
 #include <algorithm>
@@ -15,8 +19,8 @@ class Span
         Span(const Span &other);
         Span &operator = (const Span &other);
         void addNumber(int num);
-        int shortestSpan();
-        int longestSpan();
+        int shortestSpan() const;
+        int longestSpan() const;
         template <typename T>
         void add_range(T begin, T end)
         {
@@ -28,6 +32,6 @@ class Span
         }
         ~Span();
 };
-
+#endif
 
 

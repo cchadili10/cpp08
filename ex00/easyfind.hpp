@@ -1,4 +1,5 @@
-# pragma once
+# ifndef EASYFIND_HPP
+# define EASYFIND_HPP
 
 #include <exception>
 #include <stdexcept>
@@ -13,3 +14,4 @@ template <typename T> typename T::iterator easyfind(T &t, int num)
         throw std::out_of_range("not found");
     return it;
 }
+#endif

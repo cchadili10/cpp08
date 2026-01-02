@@ -1,4 +1,7 @@
-#pragma once
+# ifndef MUTANTSTACK_HPP
+# define MUTANTSTACK_HPP
+
+
 #include <stack>
 #include <iostream>
 
@@ -38,3 +41,4 @@ class MutantStack : public std::stack<T>
         ~MutantStack(){};
 };
 
+#endif

@@ -17,7 +17,6 @@ int main()
     {
         std::cerr << e.what() << '\n';
     }
-    
     try
     {
         std::vector<int> vec;
@@ -27,8 +26,11 @@ int main()
         vec.push_back(8);
         vec.push_back(8);
         vec.push_back(8);
-        Span test(4);
-        test.add_range(vec.begin(), vec.end());
+        Span sp(10);
+        sp.add_range(vec.begin(), vec.end());
+        const Span sp1(sp);
+        std::cout << sp1.shortestSpan() << std::endl;
+        std::cout << sp1.longestSpan() << std::endl;
     }
     catch(const std::exception& e)
     {
@@ -49,6 +51,5 @@ int main()
     {
         std::cerr << e.what() << '\n';
     }
-
     return 0;
 }

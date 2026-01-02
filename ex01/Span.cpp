@@ -21,16 +21,16 @@ void Span::addNumber(int num)
         throw std::runtime_error("span  is full");
 }
 
-int Span::longestSpan()
+int Span::longestSpan() const
 {
     if(arr.size() <= 1)
         throw std::runtime_error("span not have longestSpan");
-    std::vector<int>::iterator max = std::max_element(arr.begin(), arr.end());
-    std::vector<int>::iterator min = std::min_element(arr.begin(), arr.end());
+    std::vector<int>::const_iterator max = std::max_element(arr.begin(), arr.end());
+    std::vector<int>::const_iterator min = std::min_element(arr.begin(), arr.end());
     return( *max - *min);
 }
 
-int Span::shortestSpan()
+int Span::shortestSpan() const
 {
     if(arr.size() <= 1)
         throw std::runtime_error("span not have shortestSpan");
