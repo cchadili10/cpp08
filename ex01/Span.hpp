@@ -11,7 +11,6 @@ class Span
         std::vector<int>arr;
         unsigned int size;
     public:
-        typedef int *data;
         Span(unsigned int num);
         Span(const Span &other);
         Span &operator = (const Span &other);
