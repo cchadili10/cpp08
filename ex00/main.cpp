@@ -20,6 +20,7 @@ int main()
        bs.push_front(6);
        bs.push_front(8);
        bs.push_front(9);
+       
 
        std::list<int>::iterator it1 = easyfind(bs, 6);
        std::cout << *it1 << std::endl;
