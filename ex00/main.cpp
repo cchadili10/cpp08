@@ -24,11 +24,12 @@ int main()
 
        std::list<int>::iterator it1 = easyfind(bs, 6);
        std::cout << *it1 << std::endl;
+
        return 0;
    }
    catch(const std::exception& e)
    {
-    std::cerr << "not fond" << '\n';
+        std::cerr << e.what() << '\n';
    }
    
 }

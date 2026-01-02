@@ -34,7 +34,6 @@ int main()
     {
         std::cerr << e.what() << '\n';
     }
-
     try
     {
         Span sp(100000);
@@ -50,6 +49,6 @@ int main()
     {
         std::cerr << e.what() << '\n';
     }
-    
+
     return 0;
 }

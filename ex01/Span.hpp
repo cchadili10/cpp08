@@ -1,5 +1,5 @@
 #pragma once
-#include<vector>
+#include <vector>
 #include <exception>
 #include <algorithm>
 #include <iostream>
@@ -11,6 +11,7 @@ class Span
         std::vector<int>arr;
         unsigned int size;
     public:
+        typedef int *data;
         Span(unsigned int num);
         Span(const Span &other);
         Span &operator = (const Span &other);
@@ -20,12 +21,11 @@ class Span
         template <typename T>
         void add_range(T begin, T end)
         {
-            T it = begin;
-            while (it != end)
-            {
-                addNumber(*it);
-                it++;
-            }
+            size_t count = std::distance(begin , end);
+            if(arr.size() + count > size)
+                throw std::runtime_error("not enough space in span");
+            arr.insert(arr.end(), begin, end);
+            
         }
         ~Span();
 };
